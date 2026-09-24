@@ -1,23 +1,64 @@
 aid: akuramedical
-name: Akuramedical
-description: 'Akuramedical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+name: Akura Medical
+
+image: https://www.akuramedical.com/wp-content/uploads/2024/10/AKU-logo-header-1.png
+
+description: Akura Medical develops and markets the Katana™ Thrombectomy System, a medical device for treating venous thromboembolism. The company
+  aims to address the high incidence of clot-related conditions in the United States, focusing on innovative solutions for vascular health. Their
+  mission is to improve patient outcomes through advanced technology and dedicated research.
+
 url: https://raw.githubusercontent.com/api-evangelist/akuramedical/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- MedicalDevice
+- VascularHealth
+- Thrombectomy
+- Innovation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/akuramedical-hosts.yml
+- type: Vendors
+  url: vendors/akuramedical-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.akuramedical.com/privacy/
+- type: Leadership
+  url: https://www.akuramedical.com/leadership/kavi-vyas/
+- type: DomainSecurity
+  url: security/akuramedical-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/akuramedical
+  url: https://www.akuramedical.com
+
+apis:
+- name: Akura Medical API
+  description: API for Akura Medical services (no public contract discovered)
+  humanURL: https://www.akuramedical.com
+  baseURL: null
+  aid: akuramedical:akura-medical-api
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
